@@ -15,16 +15,18 @@ export default function TransactionForm({uid}) {
             name,
             amount
         }) 
-        console.log(response)
+        setName('')
+        setAmount('')
+        setPending(false)
     }
 
-    // clear the input if success 
-    useEffect(() =>{
-        if(response.success) {
-            setName('')
-            setAmount('')
-        }
-    }, [response.success])
+    // // clear the input if success 
+    // useEffect(() =>{
+    //     if(response.success) {
+    //         setName('')
+    //         setAmount('')
+    //     }
+    // }, [response.success])
 
   return (
     <>
